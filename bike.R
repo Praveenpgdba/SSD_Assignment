@@ -139,18 +139,4 @@ biplot(pca_model, main = "PCA Biplot")
 pca_model$rotation[, 1:2]
 
 #==================
-# Fit a polynomial regression model (degree 2) predicting 'density' 
-# using 'fizxed.acidity' and 'residual.sugar'
-model_poly <- lm(Rented_Bike_Count ~ poly(Dew.point.temperature_k, 3) + poly(Humidity_percent, 3), data = bike)
-
-# Display the summary of the polynomial model
-summary(model_poly)
-
-
-# Diagnostic plots for the regression model
-par(mfrow = c(2, 2))  # Arrange the plots in a 2x2 grid
-plot(model_poly)
-
-# Reset the plotting layout to default
-par(mfrow = c(1, 1))
 
